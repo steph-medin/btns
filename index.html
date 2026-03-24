@@ -71,33 +71,18 @@
   <div class="grid">
 
     <div class="card">
-      <h3>Small — Default</h3>
+      <h3>Small</h3>
       <div id="sel-default-sm-default"></div>
     </div>
 
     <div class="card">
-      <h3>Medium — Default</h3>
+      <h3>Medium</h3>
       <div id="sel-default-md-default"></div>
     </div>
 
     <div class="card">
-      <h3>Small — Open</h3>
-      <div id="sel-default-sm-open"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Open</h3>
-      <div id="sel-default-md-open"></div>
-    </div>
-
-    <div class="card">
-      <h3>Small — Disabled</h3>
+      <h3>Disabled</h3>
       <div id="sel-default-sm-disabled"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Disabled</h3>
-      <div id="sel-default-md-disabled"></div>
     </div>
 
   </div>
@@ -109,43 +94,18 @@
   <div class="grid">
 
     <div class="card">
-      <h3>Small — Default</h3>
+      <h3>Small</h3>
       <div id="sel-multi-sm-default"></div>
     </div>
 
     <div class="card">
-      <h3>Medium — Default</h3>
+      <h3>Medium</h3>
       <div id="sel-multi-md-default"></div>
     </div>
 
     <div class="card">
-      <h3>Small — Open</h3>
-      <div id="sel-multi-sm-open"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Open</h3>
-      <div id="sel-multi-md-open"></div>
-    </div>
-
-    <div class="card">
-      <h3>Small — Con selección</h3>
-      <div id="sel-multi-sm-selected"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Con selección</h3>
-      <div id="sel-multi-md-selected"></div>
-    </div>
-
-    <div class="card">
-      <h3>Small — Disabled</h3>
+      <h3>Disabled</h3>
       <div id="sel-multi-sm-disabled"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Disabled</h3>
-      <div id="sel-multi-md-disabled"></div>
     </div>
 
   </div>
@@ -157,43 +117,18 @@
   <div class="grid">
 
     <div class="card">
-      <h3>Small — Default (MXN)</h3>
+      <h3>Small</h3>
       <div id="sel-currency-sm-default"></div>
     </div>
 
     <div class="card">
-      <h3>Medium — Default (MXN)</h3>
+      <h3>Medium</h3>
       <div id="sel-currency-md-default"></div>
     </div>
 
     <div class="card">
-      <h3>Small — Open</h3>
-      <div id="sel-currency-sm-open"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Open</h3>
-      <div id="sel-currency-md-open"></div>
-    </div>
-
-    <div class="card">
-      <h3>Small — Seleccionado (USD)</h3>
-      <div id="sel-currency-sm-selected"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Seleccionado (USD)</h3>
-      <div id="sel-currency-md-selected"></div>
-    </div>
-
-    <div class="card">
-      <h3>Small — Disabled</h3>
+      <h3>Disabled</h3>
       <div id="sel-currency-sm-disabled"></div>
-    </div>
-
-    <div class="card">
-      <h3>Medium — Disabled</h3>
-      <div id="sel-currency-md-disabled"></div>
     </div>
 
   </div>
@@ -228,30 +163,10 @@
       size: 'md',
     });
 
-    const smOpen = new DefaultSelect('#sel-default-sm-open', {
-      label: 'Label', placeholder: 'Placeholder',
-      options: ['Option A', 'Option B', 'Option C'],
-      size: 'sm',
-    });
-    smOpen.el.classList.add('is-open');
-
-    const mdOpen = new DefaultSelect('#sel-default-md-open', {
-      label: 'Label', placeholder: 'Placeholder',
-      options: ['Option A', 'Option B', 'Option C'],
-      size: 'md',
-    });
-    mdOpen.el.classList.add('is-open');
-
     new DefaultSelect('#sel-default-sm-disabled', {
       label: 'Label', placeholder: 'Placeholder',
       options: ['Option A', 'Option B'],
       size: 'sm', disabled: true,
-    });
-
-    new DefaultSelect('#sel-default-md-disabled', {
-      label: 'Label', placeholder: 'Placeholder',
-      options: ['Option A', 'Option B'],
-      size: 'md', disabled: true,
     });
 
     /* ---- Multi Select ---- */
@@ -265,40 +180,9 @@
       options: colorOptions, size: 'md',
     });
 
-    const multiSmOpen = new MultiSelect('#sel-multi-sm-open', {
-      label: 'Label', placeholder: 'Select several options',
-      options: colorOptions, size: 'sm',
-    });
-    multiSmOpen.el.classList.add('is-open');
-
-    const multiMdOpen = new MultiSelect('#sel-multi-md-open', {
-      label: 'Label', placeholder: 'Select several options',
-      options: colorOptions, size: 'md',
-    });
-    multiMdOpen.el.classList.add('is-open');
-
-    const multiSmSel = new MultiSelect('#sel-multi-sm-selected', {
-      label: 'Label', placeholder: 'Select several options',
-      options: colorOptions, size: 'sm',
-    });
-    multiSmSel._select(0);
-    multiSmSel.el.classList.add('is-open');
-
-    const multiMdSel = new MultiSelect('#sel-multi-md-selected', {
-      label: 'Label', placeholder: 'Select several options',
-      options: colorOptions, size: 'md',
-    });
-    multiMdSel._select(0);
-    multiMdSel.el.classList.add('is-open');
-
     new MultiSelect('#sel-multi-sm-disabled', {
       label: 'Label', placeholder: 'Select several options',
       options: colorOptions, size: 'sm', disabled: true,
-    });
-
-    new MultiSelect('#sel-multi-md-disabled', {
-      label: 'Label', placeholder: 'Select several options',
-      options: colorOptions, size: 'md', disabled: true,
     });
 
     /* ---- Currency Select ---- */
@@ -310,30 +194,8 @@
       label: 'Label', currencies, value: 'MXN', size: 'md',
     });
 
-    const currSmOpen = new CurrencySelect('#sel-currency-sm-open', {
-      label: 'Label', currencies, value: 'MXN', size: 'sm',
-    });
-    currSmOpen.el.classList.add('is-open');
-
-    const currMdOpen = new CurrencySelect('#sel-currency-md-open', {
-      label: 'Label', currencies, value: 'MXN', size: 'md',
-    });
-    currMdOpen.el.classList.add('is-open');
-
-    new CurrencySelect('#sel-currency-sm-selected', {
-      label: 'Label', currencies, value: 'USD', size: 'sm',
-    });
-
-    new CurrencySelect('#sel-currency-md-selected', {
-      label: 'Label', currencies, value: 'USD', size: 'md',
-    });
-
     new CurrencySelect('#sel-currency-sm-disabled', {
       label: 'Label', currencies, value: 'MXN', size: 'sm', disabled: true,
-    });
-
-    new CurrencySelect('#sel-currency-md-disabled', {
-      label: 'Label', currencies, value: 'MXN', size: 'md', disabled: true,
     });
   </script>
 </body>
