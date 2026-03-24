@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Select Components — Styleguide</title>
+  <link rel="stylesheet" href="select.css" />
+  <style>
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: #f9f9f9;
+      padding: 40px;
+      color: #202020;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 40px 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #dedede;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: #8f8f8f;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #dedede;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .state-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #939f99;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Select Components</h1>
+  <p style="color:#8f8f8f; font-size:14px;">Figma: FDGMNpql81PjC1rDkE5dHA · Node 3944-6193</p>
+
+  <!-- ============================================================
+       DEFAULT SELECT
+       ============================================================ -->
+  <h2>Default Select</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Small — Default</h3>
+      <div id="sel-default-sm-default"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Default</h3>
+      <div id="sel-default-md-default"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Open</h3>
+      <div id="sel-default-sm-open"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Open</h3>
+      <div id="sel-default-md-open"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Disabled</h3>
+      <div id="sel-default-sm-disabled"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Disabled</h3>
+      <div id="sel-default-md-disabled"></div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       MULTI SELECT
+       ============================================================ -->
+  <h2>Multi Select</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Small — Default</h3>
+      <div id="sel-multi-sm-default"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Default</h3>
+      <div id="sel-multi-md-default"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Open</h3>
+      <div id="sel-multi-sm-open"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Open</h3>
+      <div id="sel-multi-md-open"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Con selección</h3>
+      <div id="sel-multi-sm-selected"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Con selección</h3>
+      <div id="sel-multi-md-selected"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Disabled</h3>
+      <div id="sel-multi-sm-disabled"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Disabled</h3>
+      <div id="sel-multi-md-disabled"></div>
+    </div>
+
+  </div>
+
+  <!-- ============================================================
+       CURRENCY SELECT
+       ============================================================ -->
+  <h2>Currency Select</h2>
+  <div class="grid">
+
+    <div class="card">
+      <h3>Small — Default (MXN)</h3>
+      <div id="sel-currency-sm-default"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Default (MXN)</h3>
+      <div id="sel-currency-md-default"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Open</h3>
+      <div id="sel-currency-sm-open"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Open</h3>
+      <div id="sel-currency-md-open"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Seleccionado (USD)</h3>
+      <div id="sel-currency-sm-selected"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Seleccionado (USD)</h3>
+      <div id="sel-currency-md-selected"></div>
+    </div>
+
+    <div class="card">
+      <h3>Small — Disabled</h3>
+      <div id="sel-currency-sm-disabled"></div>
+    </div>
+
+    <div class="card">
+      <h3>Medium — Disabled</h3>
+      <div id="sel-currency-md-disabled"></div>
+    </div>
+
+  </div>
+
+  <script src="select.js"></script>
+  <script>
+    /* ---- Shared data ---- */
+    const colorOptions = [
+      { name: 'Forest Green', sub: 'Pantone 349', color: '#2B8867' },
+      { name: 'Deep Teal',    sub: 'Pantone 320', color: '#1D7A8A' },
+      { name: 'Coral Red',    sub: 'Pantone 179', color: '#E84B3A' },
+      { name: 'Golden Sand',  sub: 'Pantone 122', color: '#F5C842' },
+    ];
+
+    const currencies = [
+      { code: 'MXN', flagSrc: 'Flag.svg' },
+      { code: 'USD', flagSrc: 'FlagUS.svg' },
+      { code: 'EUR', flag: '🇪🇺' },
+      { code: 'GBP', flag: '🇬🇧' },
+    ];
+
+    /* ---- Default Select ---- */
+    new DefaultSelect('#sel-default-sm-default', {
+      label: 'Label', placeholder: 'Placeholder',
+      options: ['Option A', 'Option B', 'Option C'],
+      size: 'sm',
+    });
+
+    new DefaultSelect('#sel-default-md-default', {
+      label: 'Label', placeholder: 'Placeholder',
+      options: ['Option A', 'Option B', 'Option C'],
+      size: 'md',
+    });
+
+    const smOpen = new DefaultSelect('#sel-default-sm-open', {
+      label: 'Label', placeholder: 'Placeholder',
+      options: ['Option A', 'Option B', 'Option C'],
+      size: 'sm',
+    });
+    smOpen.el.classList.add('is-open');
+
+    const mdOpen = new DefaultSelect('#sel-default-md-open', {
+      label: 'Label', placeholder: 'Placeholder',
+      options: ['Option A', 'Option B', 'Option C'],
+      size: 'md',
+    });
+    mdOpen.el.classList.add('is-open');
+
+    new DefaultSelect('#sel-default-sm-disabled', {
+      label: 'Label', placeholder: 'Placeholder',
+      options: ['Option A', 'Option B'],
+      size: 'sm', disabled: true,
+    });
+
+    new DefaultSelect('#sel-default-md-disabled', {
+      label: 'Label', placeholder: 'Placeholder',
+      options: ['Option A', 'Option B'],
+      size: 'md', disabled: true,
+    });
+
+    /* ---- Multi Select ---- */
+    new MultiSelect('#sel-multi-sm-default', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'sm',
+    });
+
+    new MultiSelect('#sel-multi-md-default', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'md',
+    });
+
+    const multiSmOpen = new MultiSelect('#sel-multi-sm-open', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'sm',
+    });
+    multiSmOpen.el.classList.add('is-open');
+
+    const multiMdOpen = new MultiSelect('#sel-multi-md-open', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'md',
+    });
+    multiMdOpen.el.classList.add('is-open');
+
+    const multiSmSel = new MultiSelect('#sel-multi-sm-selected', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'sm',
+    });
+    multiSmSel._select(0);
+    multiSmSel.el.classList.add('is-open');
+
+    const multiMdSel = new MultiSelect('#sel-multi-md-selected', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'md',
+    });
+    multiMdSel._select(0);
+    multiMdSel.el.classList.add('is-open');
+
+    new MultiSelect('#sel-multi-sm-disabled', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'sm', disabled: true,
+    });
+
+    new MultiSelect('#sel-multi-md-disabled', {
+      label: 'Label', placeholder: 'Select several options',
+      options: colorOptions, size: 'md', disabled: true,
+    });
+
+    /* ---- Currency Select ---- */
+    new CurrencySelect('#sel-currency-sm-default', {
+      label: 'Label', currencies, value: 'MXN', size: 'sm',
+    });
+
+    new CurrencySelect('#sel-currency-md-default', {
+      label: 'Label', currencies, value: 'MXN', size: 'md',
+    });
+
+    const currSmOpen = new CurrencySelect('#sel-currency-sm-open', {
+      label: 'Label', currencies, value: 'MXN', size: 'sm',
+    });
+    currSmOpen.el.classList.add('is-open');
+
+    const currMdOpen = new CurrencySelect('#sel-currency-md-open', {
+      label: 'Label', currencies, value: 'MXN', size: 'md',
+    });
+    currMdOpen.el.classList.add('is-open');
+
+    new CurrencySelect('#sel-currency-sm-selected', {
+      label: 'Label', currencies, value: 'USD', size: 'sm',
+    });
+
+    new CurrencySelect('#sel-currency-md-selected', {
+      label: 'Label', currencies, value: 'USD', size: 'md',
+    });
+
+    new CurrencySelect('#sel-currency-sm-disabled', {
+      label: 'Label', currencies, value: 'MXN', size: 'sm', disabled: true,
+    });
+
+    new CurrencySelect('#sel-currency-md-disabled', {
+      label: 'Label', currencies, value: 'MXN', size: 'md', disabled: true,
+    });
+  </script>
+</body>
+</html>
