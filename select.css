@@ -5,20 +5,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
-/* ---- Tokens ---- */
+/* ---- Color tokens — Mode 1.tokens.json ---- */
 :root {
-  --color-black:      #202020;
-  --color-gray-400:   #A6A6A6;
-  --color-gray-200:   #D2D2D2;
-  --color-gray-150:   #DEDEDE;
-  --color-gray-500:   #8F8F8F;
-  --color-neutral-3:  #F9F9F9;
-  --color-neutral-5:  #F4F6F5;
-  --color-neutral-30: #BDC4C1;
-  --color-neutral-50: #939F99;
-  --color-neutral-90: #3F554A;
-  --color-green:      #2B8867;
-  --color-white:      #FFFFFF;
+  --Black:          #202020;
+  --White:          #FFFFFF;
+  --Solid-Gray400:  #A6A6A6;
+  --Solid-Gray200:  #D2D2D2;
+  --Solid-Gray15:   #DEDEDE;
+  --Solid-Gray500:  #8F8F8F;
+  --Neutral-3:      #F9F9F9;
+  --Neutral-5:      #F4F6F5;
+  --Neutral-30:     #BDC4C1;
+  --Neutral-50:     #939F99;
+  --Neutral-90:     #3F554A;
+  --Neutral-Yumari: #2A4236;
 
   --font-family: 'DM Sans', sans-serif;
 
@@ -45,8 +45,8 @@
   --radius-tag:      4px;
   --radius-option:   8px;
 
-  --shadow-dropdown: 0 0 4px rgba(42, 66, 54, 0.04),
-                     0 4px 8px rgba(42, 66, 54, 0.06);
+  --shadow-dropdown: 0 0 4px color-mix(in srgb, var(--Neutral-Yumari) 4%, transparent),
+                     0 4px 8px color-mix(in srgb, var(--Neutral-Yumari) 6%, transparent);
 }
 
 /* ========================================
@@ -57,15 +57,15 @@
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(16px);
-  background: var(--color-black);
-  color: var(--color-white);
+  background: var(--Black);
+  color: var(--White);
   font-family: var(--font-family);
   font-size: var(--text-sm-size);
   line-height: var(--text-sm-lh);
   font-weight: 400;
   padding: 12px 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(42, 66, 54, 0.18);
+  box-shadow: 0 4px 12px color-mix(in srgb, var(--Neutral-Yumari) 18%, transparent);
   opacity: 0;
   transition: opacity 0.22s ease, transform 0.22s ease;
   z-index: 1000;
@@ -102,12 +102,12 @@
   line-height: var(--text-sm-lh);
   letter-spacing: var(--text-sm-ls);
   font-weight: 400;
-  color: var(--color-black);
+  color: var(--Black);
   white-space: nowrap;
 }
 
 .select-wrapper.is-disabled .select-label {
-  color: var(--color-gray-200);
+  color: var(--Solid-Gray200);
 }
 
 /* --- Field --- */
@@ -115,21 +115,23 @@
   display: flex;
   align-items: center;
   width: 100%;
-  background: var(--color-white);
-  border: 1px solid var(--color-neutral-30);
+  background: var(--White);
+  border: 1px solid var(--Neutral-30);
   border-radius: var(--radius-field);
   cursor: pointer;
   position: relative;
   overflow: hidden;
   transition: border-color 0.15s;
+  color: var(--Black);
 }
 
 .select-wrapper.is-open .select-field {
-  border-color: var(--color-neutral-50);
+  border-color: var(--Neutral-50);
 }
 
 .select-wrapper.is-disabled .select-field {
-  border-color: var(--color-gray-200);
+  border-color: var(--Solid-Gray200);
+  color: var(--Solid-Gray200);
   cursor: not-allowed;
   pointer-events: none;
 }
@@ -177,7 +179,7 @@
   flex: 1;
   font-family: var(--font-family);
   font-weight: 400;
-  color: var(--color-gray-400);
+  color: var(--Solid-Gray400);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -185,11 +187,11 @@
 }
 
 .select-text.has-value {
-  color: var(--color-black);
+  color: var(--Black);
 }
 
 .select-wrapper.is-disabled .select-text {
-  color: var(--color-gray-200);
+  color: var(--Solid-Gray200);
 }
 
 .select-wrapper.size-sm .select-text {
@@ -230,8 +232,8 @@
   left: 0;
   right: 0;
   z-index: 100;
-  background: var(--color-white);
-  border: 1px solid var(--color-neutral-30);
+  background: var(--White);
+  border: 1px solid var(--Neutral-30);
   border-radius: var(--radius-dropdown);
   box-shadow: var(--shadow-dropdown);
   overflow: hidden;
@@ -258,16 +260,16 @@
   line-height: var(--text-sm-lh);
   letter-spacing: var(--text-sm-ls);
   font-weight: 400;
-  color: var(--color-black);
+  color: var(--Black);
   transition: background 0.12s;
 }
 
 .select-option:hover {
-  background: var(--color-neutral-5);
+  background: var(--Neutral-5);
 }
 
 .select-option.is-selected {
-  background: var(--color-neutral-5);
+  background: var(--Neutral-5);
 }
 
 /* ========================================
@@ -341,14 +343,14 @@
   align-items: center;
   gap: 4px;
   padding: 2px;
-  background: var(--color-neutral-5);
+  background: var(--Neutral-5);
   border-radius: var(--radius-tag);
   font-family: var(--font-family);
   font-size: var(--text-sm-size);
   line-height: var(--text-sm-lh);
   letter-spacing: var(--text-sm-ls);
   font-weight: 400;
-  color: var(--color-black);
+  color: var(--Black);
   white-space: nowrap;
 }
 
@@ -375,12 +377,12 @@
   border-radius: 2px;
   padding: 0;
   flex-shrink: 0;
-  color: var(--color-black);
+  color: var(--Black);
   transition: background 0.12s;
 }
 
 .select-tag-remove:hover {
-  background: var(--color-gray-150);
+  background: var(--Solid-Gray15);
 }
 
 /* Add button */
@@ -391,8 +393,8 @@
   align-items: center;
   justify-content: center;
   padding: 4px 12px;
-  background: var(--color-neutral-90);
-  color: var(--color-white);
+  background: var(--Neutral-90);
+  color: var(--White);
   border: none;
   border-radius: 5px;
   font-family: var(--font-family);
@@ -431,14 +433,14 @@
   font-size: var(--text-sm-size);
   line-height: var(--text-sm-lh);
   letter-spacing: var(--text-sm-ls);
-  color: var(--color-black);
+  color: var(--Black);
 }
 
 .select-multi .select-option-sub {
   font-size: var(--text-sm-size);
   line-height: var(--text-sm-lh);
   letter-spacing: var(--text-sm-ls);
-  color: var(--color-gray-500);
+  color: var(--Solid-Gray500);
 }
 
 /* ========================================
@@ -467,7 +469,7 @@
   flex: 1;
   font-family: var(--font-family);
   font-weight: 700;
-  color: var(--color-black);
+  color: var(--Black);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -475,7 +477,7 @@
 }
 
 .select-currency.is-disabled .select-currency-code {
-  color: var(--color-gray-200);
+  color: var(--Solid-Gray200);
 }
 
 .select-wrapper.size-sm .select-currency-code {
@@ -512,7 +514,7 @@
   flex: 1;
   font-size: var(--text-sm-size);
   line-height: var(--text-sm-lh);
-  color: var(--color-black);
+  color: var(--Black);
 }
 
 .select-currency .select-option-check {

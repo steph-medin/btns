@@ -36,21 +36,21 @@ function flagImg(currency) {
   return currency.flag ?? '';
 }
 
-function chevronDown(color = '#202020') {
+function chevronDown() {
   return `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M4 6L8 10L12 6" stroke="${color}" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
 }
 
 function iconClose() {
   return `<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2 2L10 10M10 2L2 10" stroke="#202020" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
   </svg>`;
 }
 
 function iconCheck() {
   return `<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M3 8L6.5 11.5L13 5" stroke="#202020" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M3 8L6.5 11.5L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>`;
 }
 
@@ -97,7 +97,6 @@ class DefaultSelect {
 
   _render() {
     const { label, placeholder, options, size, disabled } = this.config;
-    const chevronColor = disabled ? '#D2D2D2' : '#202020';
 
     this.el.classList.add('select-wrapper', 'select-default', `size-${size}`);
     if (disabled) this.el.classList.add('is-disabled');
@@ -106,7 +105,7 @@ class DefaultSelect {
       <label class="select-label">${label}</label>
       <button class="select-field" ${disabled ? 'disabled' : ''} aria-haspopup="listbox" aria-expanded="false">
         <span class="select-text">${placeholder}</span>
-        <span class="select-chevron">${chevronDown(chevronColor)}</span>
+        <span class="select-chevron">${chevronDown()}</span>
       </button>
       <ul class="select-dropdown" role="listbox">
         ${options.map((opt, i) => `
@@ -399,7 +398,6 @@ class CurrencySelect {
   _render() {
     const { label, size, disabled } = this.config;
     const current = this._currentCurrency();
-    const chevronColor = disabled ? '#D2D2D2' : '#202020';
 
     this.el.classList.add('select-wrapper', 'select-currency', `size-${size}`);
     if (disabled) this.el.classList.add('is-disabled');
@@ -409,7 +407,7 @@ class CurrencySelect {
       <button class="select-field" ${disabled ? 'disabled' : ''} aria-haspopup="listbox" aria-expanded="false">
         <span class="select-currency-flag">${flagImg(current)}</span>
         <span class="select-currency-code">${current?.code ?? ''}</span>
-        <span class="select-chevron">${chevronDown(chevronColor)}</span>
+        <span class="select-chevron">${chevronDown()}</span>
       </button>
       <ul class="select-dropdown" role="listbox">
         ${this.config.currencies.map(c => `
