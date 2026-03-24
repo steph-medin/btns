@@ -166,8 +166,8 @@ class DefaultSelect {
        label: 'Colors',
        placeholder: 'Select several options',
        options: [
-         { name: 'Forest Green', sub: 'Pantone 349', color: '#2B8867' },
-         { name: 'Teal Blue',    sub: 'Pantone 320', color: '#1D7A8A' },
+         { name: 'Forest Green', sub: 'Pantone 349', color: 'var(--Green-green600)' },
+         { name: 'Coral Red',    sub: 'Pantone 179', color: 'var(--Red-red400)'     },
        ],
        size: 'sm' | 'md',
        disabled: false,

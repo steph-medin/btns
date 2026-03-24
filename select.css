@@ -5,20 +5,75 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
 
-/* ---- Color tokens — Mode 1.tokens.json ---- */
+/* ---- Color tokens — tokens/Primitives.json (Mode 1) ---- */
 :root {
-  --Black:          #202020;
-  --White:          #FFFFFF;
-  --Solid-Gray400:  #A6A6A6;
-  --Solid-Gray200:  #D2D2D2;
-  --Solid-Gray15:   #DEDEDE;
-  --Solid-Gray500:  #8F8F8F;
-  --Neutral-3:      #F9F9F9;
-  --Neutral-5:      #F4F6F5;
-  --Neutral-30:     #BDC4C1;
-  --Neutral-50:     #939F99;
-  --Neutral-90:     #3F554A;
-  --Neutral-Yumari: #2A4236;
+  /* Black / White */
+  --Black:               #202020;
+  --White:               #FFFFFF;
+
+  /* Solid — Gray scale */
+  --Solid-Gray900:       #363636;
+  --Solid-Gray800:       #4D4D4D;
+  --Solid-Gray700:       #636363;
+  --Solid-Gray600:       #797979;
+  --Solid-Gray500:       #8F8F8F;
+  --Solid-Gray400:       #A6A6A6;
+  --Solid-Gray300:       #BCBCBC;
+  --Solid-Gray200:       #D2D2D2;
+  --Solid-Gray15:        #DEDEDE;
+  --Solid-Gray10:        #E6E6E6;
+  --Solid-Gray5:         #F2F2F2;
+
+  /* Neutral */
+  --Neutral-3:           #F9F9F9;
+  --Neutral-5:           #F4F6F5;
+  --Neutral-10:          #EAECEB;
+  --Neutral-15:          #DFE3E1;
+  --Neutral-20:          #D2D7D4;
+  --Neutral-30:          #BDC4C1;
+  --Neutral-40:          #A8B2AD;
+  --Neutral-50:          #939F99;
+  --Neutral-60:          #7E8C85;
+  --Neutral-70:          #697A71;
+  --Neutral-80:          #54675E;
+  --Neutral-90:          #3F554A;
+  --Neutral-Yumari:      #2A4236;
+
+  /* Green */
+  --Green-Yumari:        #2A4236;
+  --Green-green800:      #224F38;
+  --Green-green700:      #1F664D;
+  --Green-green600:      #2B8867;
+  --Green-green500:      #42A979;
+  --Green-green400:      #7BD1A9;
+  --Green-green300:      #8FD6B5;
+  --Green-green200:      #BCE6D0;
+  --Green-green100:      #DAF1E5;
+  --Green-green90:       #ECF8F4;
+  --Green-green80:       #F8FCFB;
+
+  /* Red */
+  --Red-red900:          #402B2B;
+  --Red-red800:          #5A1616;
+  --Red-red700:          #6B1919;
+  --Red-red500:          #9E2E2E;
+  --Red-red400:          #D0433E;
+  --Red-red300:          #DD6464;
+  --Red-red200:          #F8AFAF;
+  --Red-red100:          #FACDCD;
+  --Red-red90:           #F8ECEC;
+
+  /* Orange */
+  --Orange-orange900:    #47311D;
+  --Orange-orange800:    #664529;
+  --Orange-orange700:    #8C582A;
+  --Orange-orange600:    #A65F21;
+  --Orange-orange500:    #CC6A14;
+  --Orange-orange400:    #DA9252;
+  --Orange-orange300:    #F2B279;
+  --Orange-orange200:    #F5CEAB;
+  --Orange-orange100:    #FFE4CC;
+  --Orange-orange90:     #FFF1E5;
 
   --font-family: 'DM Sans', sans-serif;
 
