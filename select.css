@@ -57,7 +57,7 @@
   bottom: 24px;
   left: 50%;
   transform: translateX(-50%) translateY(16px);
-  background: var(--color-neutral-90);
+  background: var(--color-black);
   color: var(--color-white);
   font-family: var(--font-family);
   font-size: var(--text-sm-size);
@@ -156,6 +156,12 @@
   margin-bottom: 8px;
 }
 
+/* Multi + Currency small: 4px padding */
+.select-wrapper.size-sm.select-multi .select-field,
+.select-wrapper.size-sm.select-currency .select-field {
+  padding: 4px 4px;
+}
+
 /* Multi select overrides fixed height — tags can wrap */
 .select-multi.size-sm .select-field {
   height: auto;
@@ -231,6 +237,7 @@
   overflow: hidden;
   list-style: none;
   padding: 8px;
+  gap: 4px;
 }
 
 .select-wrapper.is-open .select-dropdown {
@@ -313,22 +320,19 @@
   min-height: 40px;
 }
 
-/* Input row inside multi field */
+/* Input row inside multi field — tags + button wrap together */
 .select-multi-input {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   flex: 1;
   gap: 4px;
   min-width: 0;
 }
 
-/* Tags container */
+/* Tags become transparent wrapper — children flow directly in .select-multi-input */
 .select-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  flex: 1;
-  min-width: 0;
+  display: contents;
 }
 
 /* Individual tag */
